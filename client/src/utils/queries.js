@@ -10,13 +10,4 @@ export const Query_PURCHASES = gql`
         }
     }
 
-
-
-
-
-
-
-
-
-
 `

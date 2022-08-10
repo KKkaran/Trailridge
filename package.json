@@ -1,0 +1,26 @@
+{
+  "name": "Trailridge",
+  "version": "1.0.0",
+  "description": "this app will let the users add their expenses just like splitapp",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KKkaran/Trailridge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KKkaran/Trailridge/issues"
+  },
+  "homepage": "https://github.com/KKkaran/Trailridge#readme",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}

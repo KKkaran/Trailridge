@@ -19,7 +19,7 @@ const Main = () => {
             {
                 purchases.map(d => (
                     <div>
-                        <p>{d.username} ---> {d.description} on {d.createdAt }</p>
+                        <p>{d.username} ----> {d.description} on {d.createdAt }</p>
 
                     </div>
                 ))
