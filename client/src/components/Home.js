@@ -15,16 +15,16 @@ const Main = () => {
         return <h3>No purchases yet for this month</h3>
     }
     return (
-        <>
+        <div className="border border-dark p-4 text-center">
             {
                 purchases.map(d => (
                     <div>
-                        <p>{d.username} ----> {d.description} on {d.createdAt }</p>
+                        <p><strong>{d.username}</strong> ----> <strong>{d.description}</strong> for <strong>${d.price}</strong> on {d.createdAt }</p>
 
                     </div>
                 ))
             }
-        </>
+        </div>
     )
 
 }
