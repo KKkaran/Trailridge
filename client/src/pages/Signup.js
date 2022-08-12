@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ADD_USER } from "../utils/mutations";
 import { useMutation } from "@apollo/client";
+import Auth from '../utils/auth'
 
 const Signup = () => {
 
@@ -20,6 +21,8 @@ const Signup = () => {
             variables: { ...formState }
             });
             console.log(data);
+            Auth.login(data.addUser.token);
+
         } catch (e) {
             console.error(e);
         }
