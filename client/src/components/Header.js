@@ -19,19 +19,29 @@ const Header = () => {
     <header className=""/*className="bg-secondary mb-4 py-2 flex-row align-center"*/>
       <div className="d-flex justify-content-between p-2 border border-dark" /*className=/*"container flex-row justify-space-between-lg justify-center align-center"*/>
         <div>
-          <Link to="/">
-            <h1>Let's SPLIT IT</h1>
-          </Link>
+          {
+            data ? (
+              <>
+                <Link to="/">
+                    <h1>Let's SPLIT IT</h1>
+                </Link>
+              </>
+            ): (
+                <>
+                  <h1 style={{color:"#0d6efd"}}>Let's SPLIT IT</h1>
+                </>
+            )
+          }
           <>
-                {data ? (
-                  <>
-                    <h4>Welcome, { data.username }</h4>
-                  </>
-                ):(
-                    <>
-                    </>  
-                  )
-                }
+            {data ? (
+                <>
+                  <h4>Welcome, { data.username }</h4>
+                </>
+              ):(
+                <>
+                </>  
+              )
+            }
             
           </>
         </div>

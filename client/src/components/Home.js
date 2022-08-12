@@ -3,15 +3,14 @@ import { useQuery } from '@apollo/client';
 import { Query_PURCHASES } from '../utils/queries'
 import Auth from "../utils/auth";
 const Main = () => {
-    
-    let user = null;
-    const { loading, data } = useQuery(Query_PURCHASES);
-    
-    if (Auth.loggedIn()) {
-        user = Auth.getProfile().data;
-        let purchases = [];
 
-    
+    if (!Auth.loggedIn()) {
+        window.location.assign('/login')
+    }
+
+    let purchases = [];
+
+    const { loading, data } = useQuery(Query_PURCHASES);
     if (loading) {
         return <h3>Loading Purchases...</h3>
     }
@@ -34,12 +33,6 @@ const Main = () => {
             }
         </div>
     )
-    } else {
-        console.log("need to log in")
-        window.location.assign('/login')
-    }
-
-    
 
 }
 
